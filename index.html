@@ -2,25 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FreshBite Restaurant</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kuala Lumpur Restaurant</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    .hero {
+      background-image: url('your-hero-image.jpg'); /* Replace with your image */
+      background-size: cover;
+      background-position: center;
+      color: white;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: bold;
+    }
+    .hero p {
+      font-size: 1.5rem;
+    }
+    section {
+      padding: 60px 0;
+    }
+  </style>
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">FreshBite</a>
+      <a class="navbar-brand" href="#">Kuala Lumpur</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -28,70 +50,67 @@
   </nav>
 
   <!-- Hero Section -->
-  <header class="bg-image text-white text-center py-5">
+  <header id="home" class="hero">
     <div class="container">
-      <h1 class="display-4">Welcome to FreshBite</h1>
-      <p class="lead">Delicious, handmade food served daily.</p>
+      <h1>Welcome to Kuala Lumpur</h1>
+      <p>Authentic Malaysian Cuisine in the Heart of the City</p>
+      <a href="#menu" class="btn btn-primary btn-lg mt-3">Explore Our Menu</a>
     </div>
   </header>
 
-  <!-- About Section -->
-  <section id="about" class="py-5 bg-light">
+  <!-- Menu Section -->
+  <section id="menu" class="bg-light">
     <div class="container">
-      <h2 class="text-center mb-4">About Us</h2>
-      <p class="text-center">FreshBite is a family-owned restaurant serving fresh, local meals made with love. Come in for a cozy atmosphere and unforgettable flavors.</p>
+      <h2 class="text-center mb-4">Our Menu</h2>
+      <div class="row">
+        <!-- Example Dish -->
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <img src="dish1.jpg" class="card-img-top" alt="Dish Name">
+            <div class="card-body">
+              <h5 class="card-title">Nasi Lemak</h5>
+              <p class="card-text">Fragrant rice cooked in coconut milk, served with sambal, anchovies, and boiled egg.</p>
+              <p class="text-muted">€12.00</p>
+            </div>
+          </div>
+        </div>
+        <!-- Add more dishes as needed -->
+      </div>
     </div>
   </section>
 
-  <!-- Menu Section -->
-  <section id="menu" class="py-5">
+  <!-- About Us Section -->
+  <section id="about">
     <div class="container">
-      <h2 class="text-center mb-4">Our Menu</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card h-100">
-            <img src="images/burger.jpg" class="card-img-top" alt="Burger">
-            <div class="card-body">
-              <h5 class="card-title">Classic Cheeseburger</h5>
-              <p class="card-text">$9.99 - Juicy beef patty with cheddar, lettuce, and tomato.</p>
-            </div>
-          </div>
+      <h2 class="text-center mb-4">About Us</h2>
+      <p class="lead text-center">Kuala Lumpur Restaurant brings the vibrant flavors of Malaysia to your table. Our chefs blend tradition and creativity to serve dishes that honor our heritage.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact Us</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <p><strong>Address:</strong> 123 Flavor Street, Antwerp</p>
+          <p><strong>Phone:</strong> +32 123 456 789</p>
+          <p><strong>Email:</strong> info@kualalumpurrestaurant.be</p>
+          <p><strong>Opening Hours:</strong> Mon–Sun: 12pm – 10pm</p>
         </div>
-        <div class="col-md-4">
-          <div class="card h-100">
-            <img src="images/pasta.jpg" class="card-img-top" alt="Pasta">
-            <div class="card-body">
-              <h5 class="card-title">Creamy Alfredo Pasta</h5>
-              <p class="card-text">$11.99 - Fresh pasta in a rich Alfredo sauce with mushrooms.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100">
-            <img src="images/salad.jpg" class="card-img-top" alt="Salad">
-            <div class="card-body">
-              <h5 class="card-title">Garden Salad</h5>
-              <p class="card-text">$7.49 - Crisp greens, cherry tomatoes, cucumbers, vinaigrette.</p>
-            </div>
-          </div>
+        <div class="col-md-6">
+          <!-- Optional: Embed Google Map -->
+          <iframe src="https://www.google.com/maps/embed?..." width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-5 bg-light">
-    <div class="container text-center">
-      <h2>Contact Us</h2>
-      <p>📍 123 Main St, YourTown<br>📞 (123) 456-7890<br>📧 contact@freshbite.com</p>
-    </div>
-  </section>
-
   <!-- Footer -->
   <footer class="bg-dark text-white text-center py-3">
-    <p class="mb-0">&copy; 2025 FreshBite. All rights reserved.</p>
+    <p>&copy; 2025 Kuala Lumpur Restaurant. All rights reserved.</p>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
