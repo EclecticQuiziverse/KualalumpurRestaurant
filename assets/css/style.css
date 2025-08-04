@@ -178,6 +178,20 @@ section {
 }
 
 
+.dish-name {
+  color: black;
+}
+
+.dish-details {
+  color: #5dade2;
+}
+
+.menu-price {
+  padding: 10px;
+  text-align: right;
+  vertical-align: top;
+}
+
 
 
 
