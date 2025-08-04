@@ -79,38 +79,45 @@
       background-color: #e6b800;
     }
 
-    /* Accordion styles */
-    .accordion {
-      background-color: #eee;
-      color: #444;
-      cursor: pointer;
-      padding: 14px;
-      width: 100%;
+    /* Tabbed menu styles */
+    .menu-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: #f8f8f8;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .menu-tabs button {
+      flex: 1;
+      padding: 12px;
       border: none;
-      text-align: left;
-      outline: none;
+      background: none;
+      cursor: pointer;
       font-size: 16px;
-      transition: background-color 0.3s;
-      margin-top: 10px;
+      transition: background 0.3s;
     }
 
-    .accordion:hover,
-    .accordion.active {
-      background-color: #ccc;
+    .menu-tabs button:hover,
+    .menu-tabs button.active {
+      background-color: #ddd;
     }
 
-    .panel {
-      padding: 0 14px;
+    .menu-section {
       display: none;
-      background-color: #f9f9f9;
-      overflow: hidden;
+      padding: 20px;
     }
 
-    .panel ul {
-      padding-left: 20px;
+    .menu-section.active {
+      display: block;
     }
 
     @media (max-width: 600px) {
+      .menu-tabs button {
+        font-size: 14px;
+        padding: 10px;
+      }
+
       .hero {
         height: 250px;
       }
@@ -121,20 +128,6 @@
       width: 100%;
       height: 300px;
       border: none;
-    }
-
-    .menu-image {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 1em auto;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-      transition: transform 0.3s ease;
-    }
-
-    .menu-image:hover {
-      transform: scale(1.02);
     }
   </style>
 </head>
@@ -165,32 +158,43 @@
 
   <section id="menu">
     <h2 style="text-align:center;">Our Menu</h2>
-  
-    <button class="accordion">Appetizers</button>
-    <div class="panel">
+
+    <div class="menu-tabs">
+      <button class="tab-button active" onclick="showMenu('appetizers')">Appetizers</button>
+      <button class="tab-button" onclick="showMenu('soups')">Soups</button>
+      <button class="tab-button" onclick="showMenu('main')">Main Dishes</button>
+      <button class="tab-button" onclick="showMenu('drinks')">Drinks</button>
+    </div>
+
+    <div id="appetizers" class="menu-section active">
+      <h3>Appetizers</h3>
       <ul>
         <li>Spring Rolls</li>
         <li>Satay Skewers</li>
         <li>Fried Wontons</li>
       </ul>
     </div>
-  
-    <button class="accordion">Soups</button>
-    <div class="panel">
-      <img src="images/soup.png" alt="Soup Menu" class="menu-image" />
+
+    <div id="soups" class="menu-section">
+      <h3>Soups</h3>
+      <ul>
+        <li>Tom Yum Soup</li>
+        <li>Chicken Coconut Soup</li>
+        <li>Hot & Sour Soup</li>
+      </ul>
     </div>
-  
-    <button class="accordion">Main Dishes</button>
-    <div class="panel">
+
+    <div id="main" class="menu-section">
+      <h3>Main Dishes</h3>
       <ul>
         <li>Nasi Lemak</li>
         <li>Beef Rendang</li>
         <li>Char Kway Teow</li>
       </ul>
     </div>
-  
-    <button class="accordion">Drinks</button>
-    <div class="panel">
+
+    <div id="drinks" class="menu-section">
+      <h3>Drinks</h3>
       <ul>
         <li>Teh Tarik</li>
         <li>Lime Juice</li>
@@ -198,7 +202,6 @@
       </ul>
     </div>
   </section>
-  
 
   <section id="contact">
     <h2>Contact Us</h2>
@@ -215,18 +218,21 @@
   </iframe>
 
   <script>
-    const accordions = document.querySelectorAll(".accordion");
-    accordions.forEach(acc => {
-      acc.addEventListener("click", function () {
-        this.classList.toggle("active");
-        const panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-          panel.style.display = "none";
-        } else {
-          panel.style.display = "block";
-        }
+    function showMenu(sectionId) {
+      const sections = document.querySelectorAll('.menu-section');
+      const buttons = document.querySelectorAll('.tab-button');
+
+      sections.forEach(section => {
+        section.classList.remove('active');
       });
-    });
+
+      buttons.forEach(button => {
+        button.classList.remove('active');
+      });
+
+      document.getElementById(sectionId).classList.add('active');
+      event.target.classList.add('active');
+    }
   </script>
 
 </body>
