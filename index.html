@@ -2,82 +2,155 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Soup & Co</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kuala Lumpur Restaurant</title>
   <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    @media (max-width: 600px) {
+    body {
+    background-color: lightblue;
+  }
+}
+</style>
 </head>
 <body>
   <!-- Language Switcher -->
   <nav class="language-switcher">
-    <a href="nl/index.html">🇳🇱 Nederlands</a>
+    <a href="#menu">Menu</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+    <a href="nl/index.html">🇳🇱 Nederlands</a>        
   </nav>
 
   <!-- Hero Section -->
-  <header class="hero">
-    <img src="assets/images/hero.jpg" alt="Soup & Co Hero Image" />
-    <h1>Welcome to Soup & Co</h1>
-    <p>Delicious homemade soups, served with love.</p>
+   <header>
+    <h1>Kuala Lumpur Restaurant</h1>
+    <p>Authentic Malaysian Cuisine in the Heart of the City</p>
   </header>
 
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Discover the Taste of Malaysia</h2>
+      <button onclick="document.getElementById('menu').scrollIntoView({ behavior: 'smooth' });">View Menu</button>
+    </div>
+  </section>
+
   <!-- About Us -->
-  <section class="about">
+  <section id="about">
     <h2>About Us</h2>
-    <p>At Soup & Co, we believe in the power of comfort food. Our soups are made fresh daily with locally sourced ingredients. Whether you're craving something classic or adventurous, we’ve got a bowl for you.</p>
+    <p>Welcome to Kuala Lumpur Restaurant, where we serve traditional Malaysian dishes made with love and authentic ingredients. Our cozy atmosphere and flavorful menu will transport you straight to Southeast Asia.</p>
   </section>
 
   <!-- Accordion Menu -->
-  <section class="menu">
-    <h2>Our Soups</h2>
-    <img src="assets/images/soup.png" alt="Soup bowl" />
-    <div class="accordion">
-      <button class="accordion-toggle">🍅 Tomato Basil</button>
-      <div class="accordion-content">
-        <p>Rich tomato flavor with a hint of fresh basil.</p>
-      </div>
-
-      <button class="accordion-toggle">🥕 Carrot Ginger</button>
-      <div class="accordion-content">
-        <p>Sweet carrots blended with zesty ginger.</p>
-      </div>
-
-      <button class="accordion-toggle">🍄 Mushroom Cream</button>
-      <div class="accordion-content">
-        <p>Earthy mushrooms in a velvety cream base.</p>
-      </div>
+  <section id="menu">
+    <h2 style="text-align:center;">Our Menu</h2>
+  
+    <button class="accordion">Appetizers</button>
+    <div class="panel">
+      <ul>
+        <li>Spring Rolls</li>
+        <li>Satay Skewers</li>
+        <li>Fried Wontons</li>
+      </ul>
+    </div>
+  
+    <button class="accordion">Soups</button>
+    <div class="panel">
+      <img src="assets/images/soup.png" alt="Soup Menu" class="menu-image" />
+    </div>
+  
+    <button class="accordion">Main Dishes</button>
+    <div class="panel">
+    <table style="width:100%; border-collapse:collapse; font-family:sans-serif;">
+      <tbody>
+        <tr>
+          <td style="padding:10px; vertical-align:top;">
+            <strong style="color:black;">Seafood soup</strong><br>
+            <span style="color:#5dade2;">Light spicy soup with fish, prawn and squid</span>
+          </td>
+          <td style="padding:10px; text-align:right; vertical-align:top;">€9,00</td>
+        </tr>
+        <tr>
+          <td style="padding:10px; vertical-align:top;">
+            <strong style="color:black;">Tom yam soup</strong><br>
+            <span style="color:#5dade2;">Prawn soup seasoned with lemongrass, lime leaves and chilli</span>
+          </td>
+          <td style="padding:10px; text-align:right; vertical-align:top;">€9,00</td>
+        </tr>
+        <tr>
+          <td style="padding:10px; vertical-align:top;">
+            <strong style="color:black;">Chicken vermicelli soup</strong><br>
+            <span style="color:#5dade2;">Light chicken soup with vermicelli</span>
+          </td>
+          <td style="padding:10px; text-align:right; vertical-align:top;">€7,00</td>
+        </tr>
+        <tr>
+          <td style="padding:10px; vertical-align:top;">
+            <strong style="color:black;">Assam soup</strong><br>
+            <span style="color:#5dade2;">Spicy and sour soup with fish paste and rice noodles, topped with mint leaves, onion, pineapple and chilli</span>
+          </td>
+          <td style="padding:10px; text-align:right; vertical-align:top;">€8,00</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  
+    <button class="accordion">Drinks</button>
+    <div class="panel">
+      <ul>
+        <li>Teh Tarik</li>
+        <li>Lime Juice</li>
+        <li>Coconut Water</li>
+      </ul>
     </div>
   </section>
 
   <!-- Contact Info -->
-  <section class="contact">
+  <section id="contact">
     <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:info@soupandco.com">info@soupandco.com</a></p>
-    <p>Phone: +32 123 456 789</p>
-    <p>Address: Warmstraat 12, 2000 Antwerp, Belgium</p>
-  </section>
+    <p>📍 Address: Statiestraat 10, 2018 Antwerp, Belgium<br>
+       📞 Phone: +32 3 225 14 33<br>
+       📧 Email: Info@KualaLumpurRestaurant.be</p>
 
-  <!-- Embedded Map -->
-  <section class="map">
-    <h2>Find Us</h2>
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2519.045...your-map-code..."
-      width="100%"
-      height="300"
-      style="border:0;"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-    ></iframe>
+    <h3>Opening Hours</h3>
+    <table class="opening-hours">
+      <tbody>
+        <tr><td>Monday</td><td>12:00–15:00, 17:30–23:00</td></tr>
+        <tr><td>Tuesday</td><td>12:00–15:00, 17:30–23:00</td></tr>
+        <tr><td>Wednesday</td><td>12:00–15:00, 17:30–23:00</td></tr>
+        <tr><td>Thursday</td><td><strong>CLOSED</strong></td></tr>
+        <tr><td>Friday</td><td>12:00–15:00, 17:30–23:00</td></tr>
+        <tr><td>Saturday</td><td>12:00–15:00, 17:00–23:00</td></tr>
+        <tr><td>Sunday</td><td>12:00–15:00, 17:00–23:00</td></tr>
+      </tbody>
+    </table>
+    
+    <h3>Find us</h3>
+    <div class="map">
+      <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2499.043024607036!2d4.415906077270177!3d51.218283071749035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f701b8c74619%3A0x52dd3a8f9f239d55!2sKuala%20Lumpur!5e0!3m2!1sen!2sbe!4v1754296586288!5m2!1sen!2sbe" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>  
   </section>
 
   <script>
-    // Accordion functionality
-    document.querySelectorAll('.accordion-toggle').forEach(button => {
-      button.addEventListener('click', () => {
-        const content = button.nextElementSibling;
-        content.classList.toggle('active');
+    const accordions = document.querySelectorAll(".accordion");
+    accordions.forEach(acc => {
+      acc.addEventListener("click", function () {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
       });
     });
   </script>
+
 </body>
 </html>
 
