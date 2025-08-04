@@ -192,7 +192,60 @@ section {
   vertical-align: top;
 }
 
+.menu-description .dish-details {
+  color: #5dade2;
+  display: block;
+  margin-top: 4px;
+}
 
+.menu-description:not(:has(.dish-details)) {
+  padding-top: 0px;
+}
+
+.menu {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.menu h1 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.menu-note {
+  text-align: left;
+  color: #333;
+  font-weight: bolder;
+  margin-bottom: 20px;
+  font-size: 1.1em;
+}
+
+.menu-section {
+  margin-bottom: 5px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+
+.menu-section h2 {
+  font-size: 1.6em;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+.menu-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.menu-list li {
+  padding: 6px 0;
+  font-size: 1.1em;
+  color: #333;
+}
 
 
   
