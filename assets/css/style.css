@@ -1,3 +1,9 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .bg-image {
     background: url('images/restaurant.jpg') center center/cover no-repeat;
     min-height: 60vh;
@@ -45,6 +51,8 @@ section {
   justify-content: center;
   text-align: center;
   color: white;
+  padding: 0 20px; /* Match other sections */
+  box-sizing: border-box;
 }
 
 .hero-slideshow {
@@ -57,18 +65,20 @@ section {
 }
 
 .hero-slideshow .slide {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   opacity: 0;
+  position: absolute;
   transition: opacity 1s ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .hero-slideshow .slide.active {
   opacity: 1;
+  z-index: 1;
 }
 
 .hero-content {
